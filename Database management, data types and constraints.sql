@@ -1,5 +1,5 @@
 create table customers (
-	Id int not null,
+	Id SERIAL primary key,
     Profile_name VARCHAR(255) NOT NULL,
     Email VARCHAR(255) NOT NULL UNIQUE,
     Phone VARCHAR(20) NOT NULL UNIQUE,
