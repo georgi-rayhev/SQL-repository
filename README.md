@@ -136,3 +136,129 @@ delete customer by id
 Acceptance criteria:
 
 As a QA Automation trainee, I want to gain knowledge of how to perform SQL CRUD operations.
+
+# SQL: Views, Sorting and Filtering data
+
+Theory:
+
+Views
+
+Sorting data with ORDER BY clause (sort the data by one or more columns in the ascending and/or descending order)
+
+Filtering Data
+
+SELECT DISTINCT
+
+LIMIT
+
+WHERE clause
+
+Comparision and logical operators
+
+AND, OR, NOT and IS NULL operators
+
+BETWEEN, IN, LIKE
+
+Wildcards
+
+Practical tasks:
+
+Create table customers_addresses with primary key (auto increment) and:
+
+Address
+
+City - mandatory field
+
+Province
+
+State - for US addresses
+
+Postal code - a positive number, mandatory field
+
+Country - mandatory field
+
+Customers SQL Scripts 
+
+Create a view from customers_addresses: 
+
+Create a view bulgarian_customers_addresses which contains only addreses in Bulgaria;
+
+Filtering customers_addresses data:
+
+get a list of countries ordered alphabetically
+
+get a list of cities that start with a specific letter (for example cities that start with letter S will return Sofia, Sozopol etc)
+
+get 3 different random cities located in Bulgaria
+
+get a list of all addresses in Bulgaria outside of Sofia, Plovdiv, Varna
+
+get last 10 added customer addresses with a province and address filled, but without a state value
+
+get addresses that have 4-digit postal code that start with 3 and end with 7. Order the result alpabetically by country and city
+
+Acceptance criteria:
+
+As a QA Automation trainee, I want to gain knowledge of how to:
+
+order and filter data
+
+use wildecards
+
+limit query output
+
+create and query views
+
+# SQL: Aggregate Functions and Grouping data
+
+Theory:
+
+Aggregate Functions: COUNT, AVG, SUM, MAX, MIN
+
+Grouping data: GROUP BY, HAVING, GROUPING SETS
+
+Practical tasks:
+
+Create products_inventory table with PK which is autoincremented and the following structure (all fields are mandatory):
+
+Product name
+
+Available quantity
+
+Product type 
+
+Price without VAT
+
+Price with VAT
+
+Is product in stock
+
+Warehouse (can be an id, name of city, etc - it doesnt matter)
+
+Create scripts using aggregation functions and functions for grouping data:
+
+Get the count of all available products in stock
+
+Get the average product price with VAT for all categories
+
+Get the total amount of all available items in stock (use price with VAT and available qty.)
+
+Find the most and least expensive item from the table
+
+Find the most expensive item in each warehouse
+
+Get the count of all products for each category
+
+Get the count of all products for each category in and out of stock
+
+Get the count of all products for each category where the products count is more than 3
+
+Get the inventory amount for each warehouse
+
+Get all product categories stored by each warehouse
+
+Get the avarage product categories hold by the warehouses
+
+Acceptance criteria:
+
+As a QA Automation trainee, I want to gain knowledge of how to use aggregate functions and count data.
