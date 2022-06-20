@@ -33,7 +33,7 @@ where id = 1;
 
 --update customer by id - activate accout
 update customers 
-set is_custumer_profile_active = true 
+set is_custumer_profile_active = true , profile_deactivated = null , reason_for_deactivation = null 
 where id = 1;
 
 --delete cutumomer by id
