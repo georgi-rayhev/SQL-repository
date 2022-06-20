@@ -1,5 +1,6 @@
 create table customer_adress (
-Adress varchar(255) primary key ,
+Adress_id serial primary key ,
+Adress varchar(255) ,
 City   varchar(100) not null ,
 Province varchar(100) ,
 State varchar(100) ,
@@ -38,7 +39,7 @@ from customer_adress ca
 where country = 'Bulgaria';
 
 --get a list of countries ordered alphabetically
-select country
+select distinct country
 from customer_adress ca 
 order by country  asc
 
@@ -50,6 +51,7 @@ where city like 'S%';
 --get 3 different random cities located in Bulgaria
 select city
 from customer_adress ca 
+order by random()
 limit 3
 
 --get a list of all addresses in Bulgaria outside of Sofia, Plovdiv, Varna
@@ -60,9 +62,12 @@ where city not in ('Sofia','Plovdiv','Varna');
 --get last 10 added customer addresses with a province and address filled, but without a state value
 select *
 from customer_adress as ca 
-where ca.adress is not null AND ca.province is not null and ca.state is null;
+where ca.adress is not null AND ca.province is not null and ca.state is null
+order by adress_id desc
+limit 5;
 
 --get addresses that have 4-digit postal code that start with 3 and end with 7. Order the result alpabetically by country and city
-select adress
+select adress , country , city , postal_code 
 from customer_adress  
-where "postal_code"::text like '3%7';
+where "postal_code"::text like '3__7'
+order by country asc , city asc; 
