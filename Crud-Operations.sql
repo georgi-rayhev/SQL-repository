@@ -1,11 +1,11 @@
 
 --create cusutmer with all fields
-insert into customers(Id,Profile_name,Email,Phone,Age,Gdpr_consent,is_custumer_profile_active,profile_created_at,profile_deactivated,
+insert into customers(Profile_name,Email,Phone,Age,Gdpr_consent,is_custumer_profile_active,profile_created_at,profile_deactivated,
 reason_for_deactivation,notes) values 
 ('Georgi','georgi.raychev@abv.bg','0889345678',22,true,true,CURRENT_TIMESTAMP,null,null,'Notes for the profile');
 
 --create custumer only with mandatory fields
-insert into customers (Id,Profile_name,email,phone,gdpr_consent,is_custumer_profile_active,profile_created_at) values
+insert into customers (Profile_name,email,phone,gdpr_consent,is_custumer_profile_active,profile_created_at) values
 ('Ivan','ivan124@abv.bg','0988231243',true,true,CURRENT_TIMESTAMP);
 
 -- retrieves only customer’s name and phone
